@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     { label: 'Kontakt',         href: 'kontakt.html' },
   ];
 
-  const current = window.location.pathname.split('/').pop() || 'index.html';
+  const rawSlug = window.location.pathname.split('/').pop() || 'index';
+  const current = rawSlug.endsWith('.html') ? rawSlug : rawSlug + '.html';
 
   const linksHTML = pages.map(p =>
     `<li><a href="${p.href}"${current === p.href ? ' class="active"' : ''}>${p.label}</a></li>`
