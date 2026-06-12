@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
   const pages = [
     { label: 'Das Haus',        href: 'index.html' },
     { label: 'Strände',         href: 'straende.html' },
@@ -34,4 +34,4 @@
   </ul>
   <p class="footer-copy">Two Beaches &mdash; Saronischer Golf, Griechenland</p>
 </footer>`);
-})();
+});
